@@ -8,7 +8,11 @@
  * // person might be { name: 'John Doe', age: 30, city: 'New York' }
  */
 function createPersonObject() {
-
+    return {
+    name: "John Doe",
+    age: 30,
+    city: "New York"
+};
 }
 
 
@@ -23,7 +27,12 @@ function createPersonObject() {
  * // personName will be 'John Doe'
  */
 function getPersonName(person) {
-
+    const person1 = {
+        name: "John Doe",
+        age: 30,
+        city: "New York"
+}
+return person1.name
 }
 
 

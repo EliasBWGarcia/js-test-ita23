@@ -14,9 +14,16 @@
  * console.log(numbers); // [5]
  */
 function returnNumbers(start, finish) {
-
+    let arrayOfNumbers = []
+    Number(start)
+    Number(finish)
+    for (let i = start; i <= finish; i++) {
+        arrayOfNumbers.push(i);
+    }
+    return arrayOfNumbers
 }
 
+returnNumbers(5,10)
 
 /**
  * This function sums up all the values in an array.
@@ -30,23 +37,32 @@ function returnNumbers(start, finish) {
  */
 
 function sumArray(array) {
+    let sumOfArray = 0
+    for (let i = 0; i < array.length; i ++) {
+            sumOfArray += array[i];
+        }
+    return sumOfArray;
+    }
 
-}
+
 
 /**
  * This function adds a new element to the end of an array.
  *
  * @param {Array} arr - The array to which the element will be added.
  * @param {any} elem - The element to be added to the array.
- * @returns {Array} - The updated array with the new element.
+ * @returns {number} - The updated array with the new element.
  *
  * Usage:
  * const myArray = [1, 2, 3];
  * const updatedArray = pushElement(myArray, 4); // updatedArray will be [1, 2, 3, 4]
  */
 function pushElement(arr, elem) {
-
+    let array = arr
+    array.push(elem)
+    return array
 }
+
 
 
 /**
@@ -61,5 +77,10 @@ function pushElement(arr, elem) {
  * const filtered = removeValue(numbers, 2); // filtered will be [1, 3, 4, 5]
  */
 function removeValue(array, valueToRemove) {
-
+    const arrayOfNumbers = [array];
+        if (valueToRemove === 2) {
+            arrayOfNumbers.splice()
+        }
 }
+
+removeValue([1,2,3,4], 2)

@@ -9,7 +9,7 @@
  * const message = generateMessage("Jack", 25); // "Hey Jack, happy 25 birthday!"
  */
 function generateMessage(name, age) {
-
+    return `Hey ${name}, happy ${age} birthday!`
 }
 
 /**
@@ -22,8 +22,10 @@ function generateMessage(name, age) {
  * const title = titleCase("hello world"); // title will be "Hello World"
  */
 function titleCase(sentence) {
-
+    sentence[0].toUpperCase()
+    return sentence
 }
+
 
 /**
  * This function returns the sum of a range of numbers in an array.
@@ -36,7 +38,11 @@ function titleCase(sentence) {
  * const sum = sumOfRange(1, 4); // sum will be 10
  */
 function sumOfRange(start, end) {
-
+        let sumOfNumberInArray = 0;
+        for (let i = start; i <= end; i++) {
+            sumOfNumberInArray += i;
+        }
+        return sumOfNumberInArray;
 }
 
 
@@ -51,8 +57,12 @@ function sumOfRange(start, end) {
  * const anotherAcronym = generateAcronym("Federal Bureau Investigation"); // anotherAcronym will be "FBI"
  */
 function generateAcronym(sentence) {
+        return sentence.match(/(?<=(\s|^))[a-z]/gi)
+            .join('')
+            .toUpperCase();
+    } // med inspiration fra https://stackoverflow.com/questions/8279859/get-first-letter-of-each-word-in-a-string-in-javascript
 
-}
+
 
 
 /**
@@ -66,5 +76,27 @@ function generateAcronym(sentence) {
  * const anotherCount = countConsonantsWeighted("JavaScript"); // anotherCount will be 9
  */
 function countConsonantsWeighted(str) {
+    const consonants = "iyeæøauoå";
+    let sumOfConsonants = 0;
+    let sumOfLowerCases = 0;
+    let sumOfUpperCases = 0;
 
-}
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === consonants) {
+            sumOfConsonants +=1;
+        } else if (str[i] === str[i].toUpperCase()) {
+                sumOfUpperCases += 1;
+            } else if (str[i] === str[i].toLowerCase()) {
+                sumOfLowerCases += 1;
+            }
+        }
+    return {
+        consonants: sumOfConsonants,
+        lowerCase: sumOfLowerCases,
+        upperCase: sumOfUpperCases
+    };
+    }
+
+
+
+

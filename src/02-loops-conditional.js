@@ -10,8 +10,14 @@
  */
 
 function isEven(number) {
-
+    if (number % 2 === 0) {
+        return true
+    } else {
+        return false
+    }
 }
+
+isEven(4)
 
 /**
  * This function checks if a number is within a range.
@@ -27,7 +33,11 @@ function isEven(number) {
  */
 
 function isWithinRange(n, min, max) {
-
+    if (n >= min && n <=max) {
+        return true
+    } else {
+        return false
+    }
 }
 
 /**
@@ -43,7 +53,11 @@ function isWithinRange(n, min, max) {
  */
 
 function stringContainsBa(string) {
-
+    if (string.includes("ba")) {
+        return true
+    } else {
+        return false
+    }
 }
 
 
@@ -60,9 +74,3 @@ function stringContainsBa(string) {
 function sumOfDigitsWithPosition(num) {
 
 }
-
-
-
-
-
-
